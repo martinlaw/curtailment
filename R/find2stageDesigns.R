@@ -108,6 +108,6 @@ if(nrow(simon.df)==0){
  simon.df[, c("alpha", "power", "EssH0", "Ess", "thetaF")] <- signif(simon.df[, c("alpha", "power", "EssH0", "Ess", "thetaF")], 4)
   simon.output <- list(input=simon.input,
                        all.des=simon.df)
-  simon.output <- structure(simon.output, class="curtailment_2stage")
+  simon.output <- structure(simon.output, class="curtailment_2stage")  #Fix this.
   return(simon.output)
 }

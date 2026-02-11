@@ -35,3 +35,12 @@ plot.curtailment_2stage <- function(findDesign.output, print.row, xmax=NULL, yma
   plot.and.bounds <- createPlotAndBoundsSimon(des=des, des.input=des.input, rownum=1, xmax=xmax, ymax=ymax)
   return(plot.and.bounds)
 }
+
+#' @export
+plot.curtailment_simon <- function(findDesign.output, print.row, xmax=NULL, ymax=NULL){
+  des <- findDesign.output$all.des
+  des <- des[print.row, , drop=FALSE]
+  des.input <- findDesign.output$input
+  plot.and.bounds <- createPlotAndBoundsSimon(des=des, des.input=des.input, rownum=1, xmax=xmax, ymax=ymax)
+  return(plot.and.bounds)
+}
